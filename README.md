@@ -2,7 +2,7 @@
 
 A Lumen package for the [Firebase PHP Admin SDK](https://github.com/kreait/firebase-php).
 
-[![Current version](https://img.shields.io/packagist/v/kreait/laravel-firebase.svg?logo=composer)](https://packagist.org/packages/kreait/laravel-firebase)
+[![Current version](https://img.shields.io/packagist/v/prusaktech/lumen-firebase.svg?logo=composer)](https://packagist.org/packages/prusaktech/lumen-firebase)
 [![Firebase Admin SDK version](https://img.shields.io/badge/Firebase%20Admin%20SDK-%5E4.32.0-blue)](https://packagist.org/packages/kreait/firebase-php)
 ![Supported Lumen versions](https://img.shields.io/badge/Lumen-%3E%3D6.x-blue)
 
