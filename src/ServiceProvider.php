@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kreait\Laravel\Firebase;
+namespace PrusakTech\Laravel\Firebase;
 
 use Illuminate\Contracts\Foundation\Application;
 use Kreait\Firebase;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kreait\Laravel\Firebase\Facades;
+namespace PrusakTech\Laravel\Firebase\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
