@@ -1,11 +1,10 @@
-# Firebase for Laravel
+# Firebase for Lumen
 
-A Laravel package for the [Firebase PHP Admin SDK](https://github.com/kreait/firebase-php).
+A Lumen package for the [Firebase PHP Admin SDK](https://github.com/kreait/firebase-php).
 
 [![Current version](https://img.shields.io/packagist/v/kreait/laravel-firebase.svg?logo=composer)](https://packagist.org/packages/kreait/laravel-firebase)
 [![Firebase Admin SDK version](https://img.shields.io/badge/Firebase%20Admin%20SDK-%5E4.32.0-blue)](https://packagist.org/packages/kreait/firebase-php)
-![Supported Laravel versions](https://img.shields.io/badge/Laravel-%3E%3D5.8-blue)
-[![Discord](https://img.shields.io/discord/523866370778333184.svg?color=7289da&logo=discord)](https://discord.gg/nbgVfty)
+![Supported Lumen versions](https://img.shields.io/badge/Lumen-%3E%3D6.x-blue)
 
 * [Installation](#installation)
 * [Configuration](#configuration)
@@ -14,26 +13,34 @@ A Laravel package for the [Firebase PHP Admin SDK](https://github.com/kreait/fir
 
 ## Installation
 
-This package requires Laravel 5.8 and higher.
+This package requires Lumen 6.x and higher.
 
 ```bash
-composer require kreait/laravel-firebase
+composer require prusak-tech/lumen-firebase
 ```
 
-If you don't use package auto-discovery, add the following service provider in `config/app.php`
+Add the following service provider in `bootstrap/app.php`
 
 ```php
-// config/app.php
+// bootstrap/app.php
 <?php
 
-return [
-    // ...
-    'providers' => [
-        // ...
-        Kreait\Laravel\Firebase\ServiceProvider::class
-    ]
-    // ...   
-];
+/*
+|--------------------------------------------------------------------------
+| Register Service Providers
+|--------------------------------------------------------------------------
+|
+| Here we will register all of the application's service providers which
+| are used to bind services into the container. Service providers are
+| totally optional, so you are not required to uncomment this line.
+|
+*/
+
+// ...
+
+$app->register(\PrusakTech\Lumen\Firebase\ServiceProvider::class);
+
+// ...
 ```
 
 ## Configuration
@@ -56,12 +63,7 @@ FIREBASE_CREDENTIALS=/full/path/to/firebase_credentials.json
 FIREBASE_CREDENTIALS=relative/path/to/firebase_credentials.json
 ```
 
-For further configuration, please see [config/firebase.php](config/firebase.php). You can modify the configuration
-by copying it to your local `config` directory with the publish command:
-
-```bash
-php artisan vendor:publish --provider="Kreait\Laravel\Firebase\ServiceProvider" --tag=config
-```
+For further configuration, please see [config/firebase.php](config/firebase.php). You have to copy it manually, as it is done in Lumen.
 
 ## Usage
 
